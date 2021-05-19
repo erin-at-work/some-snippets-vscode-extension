@@ -1,0 +1,27 @@
+{
+	"name": "react-typescript-cypress-testing-lib-snippets",
+	"displayName": "Some React Snippets in TS",
+	"description": "Code snippets for react, cypress, react-testing-lib in TS",
+	"version": "0.0.1",
+	"publisher": "Erin Lee",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"React",
+		"Snippet",
+		"React Snippets",
+		"React Code Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets.json"
+			}
+		]
+	}
+}
