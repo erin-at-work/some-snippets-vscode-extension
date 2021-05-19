@@ -3,9 +3,13 @@
 	"displayName": "Some React Snippets in TS",
 	"description": "Code snippets for react, cypress, react-testing-lib in TS",
 	"version": "0.0.1",
-	"publisher": "Erin Lee",
+	"publisher": "ErinLee",
 	"engines": {
 		"vscode": "^1.28.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/erin-at-work/some-snippets-vscode-extension"
 	},
 	"categories": [
 		"Snippets"
