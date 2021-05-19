@@ -1,0 +1,53 @@
+{
+	"new: unitUtilTest": {
+		"prefix": "new-TestUtil",
+		"body": [
+			"import { ${1:${TM_FILENAME_BASE}} } from './${1:${TM_FILENAME_BASE}}'",
+			"",
+			"describe('${1:${TM_FILENAME_BASE}}', () => {",
+			"\tit('$0', () => {",
+			"\t\tconst valueCheck = ${1:${TM_FILENAME_BASE}}()",
+			"\t\texpect(valueCheck).toBeTruthy()",
+			"\t})",
+			"})",
+			"",
+			"// npx jest ${TM_FILEPATH} --watch",
+			""
+		],
+		"description": "Test: New Util spec file"
+	},
+	"new: E2E Test": {
+		"prefix": "new-Test E2E",
+		"body": [
+			"describe('${1:ON_THIS_PAGE}', () => {",
+			"\tbeforeEach(() => {",
+			"\t\tcy.login()",
+			"\t\tcy.vendorStubs()",
+			"\t\tcy.route('GET', '$2', {user: {}}).as('userStub')",
+			"\t\tcy.visit('/')",
+			"\t\tcy.wait('@userStub')",
+			"\t})",
+			"\t\t",
+			"\tit('${0:USER_TAKES_ACTION}', () => {",
+			"\t\tcy.dataTest('').click()",
+			"\t})",
+			"})",
+			""
+		],
+		"description": "Test: New e2e (cypress) spec file"
+	},
+	"add: e2eItBlock": {
+		"prefix": "add-e2eItBlock",
+		"body": [
+			"\tit('${0:USER_TAKES_ACTION}', () => {",
+			"\t\tcy.dataTest('').click()",
+			"\t})"
+		],
+		"description": "Test: Add describe block to e2e spec"
+	},
+	"add: e2eRoute": {
+		"prefix": "cy.route",
+		"body": "cy.route('GET', '$0', {$1}).as('$2')",
+		"description": "Test: Add cy.route()"
+	}
+}

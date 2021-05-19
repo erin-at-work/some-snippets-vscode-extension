@@ -34,6 +34,18 @@
 			{
 				"language": "typescriptreact",
 				"path": "./snippets/react.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/specs.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/specs.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/react-specs.json"
 			}
 		]
 	}
