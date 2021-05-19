@@ -1,0 +1,12 @@
+{
+	"clipboard: variable": {
+		"prefix": "clip-variable",
+		"body": "const ${0:variable} = ${CLIPBOARD}",
+		"description": "Create new constant variable from clipboard contents"
+	},
+	"console log": {
+		"prefix": "log",
+		"body": "console.log(${CLIPBOARD})",
+		"description": "Console log"
+	}
+}

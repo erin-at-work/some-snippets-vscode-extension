@@ -3,6 +3,7 @@
 	"displayName": "Some React Snippets in TS",
 	"description": "Code snippets for react, cypress, react-testing-lib in TS",
 	"version": "0.0.1",
+	"author": "email.erin@gmail.com",
 	"publisher": "ErinLee",
 	"engines": {
 		"vscode": "^1.28.0"
@@ -24,7 +25,15 @@
 		"snippets": [
 			{
 				"language": "javascript",
-				"path": "./snippets.json"
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/react.json"
 			}
 		]
 	}

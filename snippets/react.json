@@ -1,21 +1,4 @@
 {
-  // Place your rogers workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-  // Placeholders with the same ids are connected.
-  // Example:
-  // "Print to console": {
-  // 	"scope": "javascript,typescript",
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
-  // SECTION: REACT COMPONENT
   "new: typeScriptReactFunctionalComponent": {
     "prefix": "new-Component",
     "body": [
@@ -56,7 +39,6 @@
     ],
     "description": "Functional Component with props + TS interface"
   },
-  // SECTION: React Hook Form
   "new: reactHookForm": {
     "prefix": "new-ReactHookForm",
     "body": [
@@ -104,7 +86,6 @@
     ],
     "description": "Template for react-hook-form Form component"
   },
-  // SECTION: REACT: ADD HELPERS
   "add: TSInterfaceAndProps": {
     "prefix": "add-Props",
     "body": [
@@ -124,10 +105,13 @@
   },
   "add: useEffect": {
     "prefix": "useEffect",
-    "body": ["useEffect(() => {", "\t$1", "},[$0])"],
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "},[$0])"
+    ],
     "description": "Adds useEffect template"
   },
-  // SECTION: REACT: CREATE FROM CLIPBOARD
   "clipboard: react component": {
     "prefix": "clip-component",
     "body": [
@@ -152,7 +136,6 @@
     ],
     "description": "Create new component from clipboard contents"
   },
-  // SECTION: COMPONENT UNIT TESTS
   "new: unitTest": {
     "prefix": "new-TestComponent",
     "body": [
@@ -226,7 +209,6 @@
     ],
     "description": "Test: Adds redux to component spec"
   },
-  // SECTION: UTIL TESTS
   "new: unitUtilTest": {
     "prefix": "new-TestUtil",
     "body": [
@@ -244,7 +226,6 @@
     ],
     "description": "Test: New Util spec file"
   },
-  // SECTION: E2E TESTS
   "new: E2E Test": {
     "prefix": "new-Test E2E",
     "body": [
@@ -278,16 +259,5 @@
     "prefix": "cy.route",
     "body": "cy.route('GET', '$0', {$1}).as('$2')",
     "description": "Test: Add cy.route()"
-  },
-  // SECTION: JAVASCRIPT
-  "clipboard: variable": {
-    "prefix": "clip-variable",
-    "body": "const ${0:variable} = ${CLIPBOARD}",
-    "description": "Create new constant variable from clipboard contents"
-  },
-  "console log": {
-    "prefix": "log",
-    "body": "console.log(${CLIPBOARD})",
-    "description": "Console log"
   }
 }
