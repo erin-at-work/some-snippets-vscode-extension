@@ -52,21 +52,17 @@
     "description": "Adds props + TS interface"
   },
   "add: useState": {
-    "prefix": "useState",
+    "prefix": "add-useState",
     "body": "const [$1, set$1] = useState<$2>($0)",
     "description": "Adds useState template"
   },
   "add: useEffect": {
-    "prefix": "useEffect",
-    "body": [
-      "useEffect(() => {",
-      "\t$1",
-      "},[$0])"
-    ],
+    "prefix": "add-useEffect",
+    "body": ["useEffect(() => {", "\t$1", "},[$0])"],
     "description": "Adds useEffect template"
   },
   "clipboard: react component": {
-    "prefix": "clip-component",
+    "prefix": "clip-Component",
     "body": [
       "const ${0:NewComponent}: FC = () => {",
       "\treturn (",
@@ -78,7 +74,7 @@
     "description": "Create new component from clipboard contents"
   },
   "clipboard: react component with ts interface": {
-    "prefix": "clip-component",
+    "prefix": "clip-ComponentProps",
     "body": [
       "const ${0:NewComponent}: FC = () => {",
       "\treturn (",

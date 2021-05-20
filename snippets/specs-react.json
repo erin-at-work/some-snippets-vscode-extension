@@ -1,0 +1,54 @@
+{
+  "new: TestUnit": {
+    "prefix": "new-test-Component",
+    "body": [
+      "import React from 'react'",
+      "import { screen, fireEvent, waitFor, cleanup, render } from '@testing-library/react'",
+      "import userEvent from '@testing-library/user-event'",
+      "import ${1:${TM_FILENAME_BASE/(.*)\\..+$/$1/}} from './${1:${TM_FILENAME_BASE}}'",
+      "",
+      "// See https://testing-library.com/docs/react-testing-library/cheatsheet",
+      "describe('<${1:${TM_FILENAME_BASE}} />', () => {",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\trender(<${1:${TM_FILENAME_BASE}} />)",
+      "\t})",
+      "",
+      "\tafterEach(cleanup)",
+      "",
+      "\tit('renders $0', () => {",
+      "\t\texpect(screen.getByText(/text/)).toBeTruthy()",
+      "\t})",
+      "",
+      "})",
+      "",
+      "// npx jest ${TM_FILEPATH} --watch",
+      ""
+    ],
+    "description": "Test: New Component spec file"
+  },
+  "add: TestRenderBlock": {
+    "prefix": "add-test-RenderBlock",
+    "body": [
+      "",
+      "\tit('renders $0', () => {",
+      "\t\texpect(screen.getByText(/text/)).toBeTruthy()",
+      "\t})",
+      ""
+    ],
+    "description": "Test: Adds async & user events test block"
+  },
+  "add: TestAsyncBlock": {
+    "prefix": "add-test-AsyncBlock",
+    "body": [
+      "",
+      "\tit('should allow user to enter values$2', async () => {",
+      "\t\tfireEvent.change(screen.getByTestId('data-test'), { target: { value: 'VALUE' } }) ",
+      "\t\tuserEvent.type(screen.getByTestId('data-test'), '{enter}')",
+      "\t\tawait waitFor(() => expect(screen.getByText(/text/i)).toBeTruthy())",
+      "\t})",
+      ""
+    ],
+    "description": "Test: Adds async & user events test block"
+  }
+}
