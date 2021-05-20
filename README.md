@@ -1,8 +1,8 @@
 # Some Snippets
 
-Personal collection of frequented snippets for VSCode.
+_Personal collection of frequented snippets for VSCode._
 
-Stack: React, React Testing Library, and Cypress with TypeScript.
+**Stack:** TypeScript ・ React ・ React Testing Library ・ Cypress
 
 Found a lot of the current vscode snippets in the marketplace have aliases difficult to remember. Ain't nobody got time for that.
 Created a personal set that makes it faster to retrieve & autocomplete.
@@ -29,7 +29,7 @@ _works for JS & TS files_
 |  `add-useState` | `const [item, setitem] = useState<TYPE>()` |
 | `add-useEffect` | `useEffect(() => { }, [])`                 |
 
-### add-Props
+### `add-Props`
 
 ```javascript
 
@@ -40,7 +40,7 @@ interface IComponentProps {
 const Component: FC<IComponentProps> = (props) => {
 ```
 
-### new-Component
+### `new-Component`
 
 ```javascript
 import React, { FC } from "react";
@@ -52,7 +52,7 @@ const Component: FC = () => {
 export default Component;
 ```
 
-### new-ComponentProps
+### `new-ComponentProps`
 
 ```javascript
 import React, { FC } from "react";
@@ -68,7 +68,7 @@ const Component: FC<IComponentProps> = ({ prop }) => {
 export default Component;
 ```
 
-### clip-Component
+### `clip-Component`
 
 ```javascript
 const Component: FC = () => {
@@ -76,7 +76,7 @@ const Component: FC = () => {
 };
 ```
 
-### clip-ComponentProps
+### `clip-ComponentProps`
 
 ```javascript
 interface IComponentProps {
