@@ -47,7 +47,7 @@
       "\t${2:props}: ${3|string,boolean,() => void|}",
       "}",
       "",
-      "const ${1:${TM_FILENAME_BASE}}: FC<I${1:${TM_FILENAME_BASE}}Props> = (props) => {"
+      "const ${1:${TM_FILENAME_BASE}}: FC<I${1:${TM_FILENAME_BASE}}Props> = ({ ${2:props} }) => {"
     ],
     "description": "Adds props + TS interface"
   },
@@ -58,7 +58,11 @@
   },
   "add: useEffect": {
     "prefix": "add-useEffect",
-    "body": ["useEffect(() => {", "\t$1", "},[$0])"],
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "},[$0])"
+    ],
     "description": "Adds useEffect template"
   },
   "clipboard: react component": {
