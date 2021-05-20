@@ -1,6 +1,6 @@
 # Some Snippets
 
-_Personal collection of frequented snippets for VSCode._
+_Personal collection of frequented snippets for VSCode._ Find it in the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=ErinLee.react-typescript-cypress-testing-lib-snippets)
 
 **Stack:** TypeScript ・ React ・ React Testing Library ・ Cypress
 
@@ -10,6 +10,8 @@ Created a personal set that makes it faster to retrieve & autocomplete.
 - `add-` - Adds a snippet
 - `new-` - Creates a new file template using the filename
 - `clip-` - Wraps the clipboard contents in a snippet
+
+---
 
 ## Some JS Methods Snippets with Clipboard Copy
 
@@ -205,3 +207,7 @@ it('', () => {
 ```javascript
 cy.route("GET", "").as("");
 ```
+
+--
+
+😎
