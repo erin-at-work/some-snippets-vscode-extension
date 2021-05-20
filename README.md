@@ -91,7 +91,9 @@ const Component: FC<IComponentProps> = ({ prop }) => {
 ## Some Snippets for Unit Specs
 
 Includes a quick way to watch your generated spec file.
+
 Copy & paste to your console.
+
 Remove commented snippet when done.
 
 _works for JS & TS files_
@@ -115,9 +117,12 @@ describe("helper", () => {
 
 _ends in `.tsx`_
 
-Uses _react-testing-library_. Links to the testing library's cheatsheet.
+Uses [react-testing-library](https://testing-library.com/docs/react-testing-library/). Links to the testing library's cheatsheet.
+
 Includes a quick way to watch your generated spec file.
+
 Copy & paste to your console.
+
 Remove commented links and snippet when done.
 
 ### `new-test-Component`
