@@ -1,52 +1,53 @@
 {
-	"name": "react-typescript-cypress-testing-lib-snippets",
-	"displayName": "Some React Snippets in TS",
-	"description": "Code snippets for react, cypress, react-testing-lib in TS",
-	"version": "0.2.0",
-	"author": "email.erin@gmail.com",
-	"publisher": "ErinLee",
-	"engines": {
-		"vscode": "^1.28.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/erin-at-work/some-snippets-vscode-extension"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"keywords": [
-		"React",
-		"Snippet",
-		"React Snippets",
-		"React Code Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/js.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/js.json"
-			},
-			{
-				"language": "typescriptreact",
-				"path": "./snippets/react.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/specs.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/specs.json"
-			},
-			{
-				"language": "typescriptreact",
-				"path": "./snippets/react-specs.json"
-			}
-		]
-	}
+  "name": "react-typescript-cypress-testing-lib-snippets",
+  "displayName": "Some React Snippets in TS",
+  "description": "Code snippets for react, cypress, react-testing-lib in TS",
+  "version": "0.2.0",
+  "author": "email.erin@gmail.com",
+  "publisher": "ErinLee",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "icon": "images/eee-vscode-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erin-at-work/some-snippets-vscode-extension"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "React",
+    "Snippet",
+    "React Snippets",
+    "React Code Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/specs.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/specs.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react-specs.json"
+      }
+    ]
+  }
 }
