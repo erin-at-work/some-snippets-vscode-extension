@@ -11,6 +11,16 @@ Created a personal set that makes it faster to retrieve & autocomplete.
 - `new-` - Creates a new file template using the filename
 - `clip-` - Wraps the clipboard contents in a snippet
 
+`add-Component`:
+
+![Screenshot: new-Component](https://user-images.githubusercontent.com/50590950/119012918-783c0680-b964-11eb-8117-0cd67ff08e53.gif)
+
+---
+
+`add-ComponentProps`:
+
+![Screenshot: new-ComponentProps](https://user-images.githubusercontent.com/50590950/119012290-e92eee80-b963-11eb-8955-687f77ee788e.gif)
+
 ---
 
 ## Some JS Methods Snippets with Clipboard Copy
