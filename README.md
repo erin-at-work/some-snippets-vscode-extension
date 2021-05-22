@@ -11,12 +11,7 @@ Created a personal set that makes it faster to retrieve & autocomplete.
 - `new-` - Creates a new file template using the filename
 - `clip-` - Wraps the clipboard contents in a snippet
 
-`add-Component`:
-
-![Screenshot: new-Component](https://user-images.githubusercontent.com/50590950/119012918-783c0680-b964-11eb-8117-0cd67ff08e53.gif)
-
----
-
+## Example Screenshot:
 `add-ComponentProps`:
 
 ![Screenshot: new-ComponentProps](https://user-images.githubusercontent.com/50590950/119012290-e92eee80-b963-11eb-8955-687f77ee788e.gif)
@@ -32,15 +27,32 @@ _works for JS & TS files_
 | `clip-variable` | `const variable = YOUR_CLIPBOARD` |
 |  `clip-console` | `console.log(YOUR_CLIPBOARD)`     |
 
+## Some TS Methods Snippets
+
+_works for TS files_
+
+|          Prefix  | Method                     | Also works with |
+| ---------------: | -------------------------- |-----------------|
+| `add-interface` | `export interface IComponentContext { props: string }` | `interface` |
+|  `add-type`     | `export type TSomething = props`    | `type` |
+|  `ts-ignore`     | `// @ts-ignore`    |  |
+
 ## Some Snippets for React
 
 ### Hooks
 
-|          Prefix | Method                                     |
-| --------------: | ------------------------------------------ |
-|  `add-useState` | `const [item, setitem] = useState<TYPE>()` |
-| `add-useEffect` | `useEffect(() => { }, [])`                 |
+|          Prefix  | Method                     | Also works with |
+| ---------------: | -------------------------- |-----------------|
+|  `add-useState`  | `const [item, setItem] = useState(CHOOSE_DEFAULTS)`  |    `useState`   |
+| `add-useEffect`  | `useEffect(() => { }, [])` |    `useEffect`  |
+| `add-useContext` | `const featureContext = useContext(FeatureContext)` |    `useContext`   |
+| `add-useMemo`    | `const memoizedValue = useMemo(() => computeExpensiveValue(deps), [deps])` |    `useMemo`      |
+| `add-useCallback`| `const memoizedCallback = useCallback(() => { fn(deps) }, [deps])` |    `useCallback`  |
+| `add-useReducer` | `const [state, dispatch] = useReducer(reducer, initializerArg)` |    `useReducer`   |
+| `add-useContext` | `const featureContext = useContext(FeatureContext)` |    `useContext`   |
+| `add-useRef`     | `const ref = useRef(initialValue)` |    `useRef`       |
 
+---
 ### `add-Props`
 
 ```javascript
@@ -80,6 +92,28 @@ const Component: FC<IComponentProps> = ({ prop }) => {
 export default Component;
 ```
 
+### `new-ContextProvider`
+
+```javascript
+import React, { createContext, ReactNode } from 'react'
+
+export interface IComponentContextState {
+
+}
+
+const defaultState: IComponentContextState = {
+
+}
+
+export const ComponentContext = createContext(defaultState)
+
+export const ComponentContextProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const state =
+  return <ComponentContext.Provider value={state}>{children}</ComponentContext.Provider>
+}
+
+```
+
 ### `clip-Component`
 
 ```javascript
@@ -102,9 +136,7 @@ const Component: FC<IComponentProps> = ({ prop }) => {
 
 ## Some Snippets for Unit Specs
 
-Includes a quick way to watch your generated spec file.
-
-Copy & paste to your console.
+Includes a quick way to watch your generated spec file. Just copy & paste to your console.
 
 Remove commented snippet when done.
 
@@ -131,9 +163,7 @@ _ends in `.tsx`_
 
 Uses [react-testing-library](https://testing-library.com/docs/react-testing-library/). Links to the testing library's cheatsheet.
 
-Includes a quick way to watch your generated spec file.
-
-Copy & paste to your console.
+Includes a quick way to watch your generated spec file. Just copy & paste to your console.
 
 Remove commented links and snippet when done.
 
