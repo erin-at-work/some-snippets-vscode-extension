@@ -39,6 +39,29 @@
     ],
     "description": "Functional Component with props + TS interface"
   },
+  "new: typeScriptReactContextProvider": {
+    "prefix": "new-ContextProvider",
+    "body": [
+      "import React, { createContext, ReactNode } from 'react'",
+      "",
+      "export interface I${1:${TM_FILENAME_BASE}}State {",
+      "\t",
+      "}",
+      "",
+      "const ${2:defaultState}: I${1:${TM_FILENAME_BASE}}State = {",
+      "\t",
+      "}",
+      "",
+      "export const ${TM_FILENAME_BASE} = createContext(${2:defaultState})",
+      "",
+      "export const ${TM_FILENAME_BASE}Provider = ({ children }: { children: ReactNode }): JSX.Element => {",
+      "\tconst state = $0",
+      "\treturn <${TM_FILENAME_BASE}.Provider value={state}>{children}</${TM_FILENAME_BASE}.Provider>",
+      "}",
+      ""
+    ],
+    "description": "Create React Context and Provider"
+  },
   "add: TSInterfaceAndProps": {
     "prefix": "add-Props",
     "body": [
@@ -52,17 +75,12 @@
     "description": "Adds props + TS interface"
   },
   "add: useState": {
-    "prefix": "add-useState",
-    "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState$0(${2|false,undefined,null,0,'',value|})",
-    "description": "Adds useState with options for default state"
-  },
-  "add: useState default": {
-    "prefix": "useState",
+    "prefix": ["add-useState", "useState"],
     "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState$0(${2|false,undefined,null,0,'',value|})",
     "description": "Adds useState with options for default state"
   },
   "add: useEffect": {
-    "prefix": "add-useEffect",
+    "prefix": ["add-useEffect", "useEffect"],
     "body": [
       "useEffect(() => {",
       "\t$1",
@@ -70,14 +88,34 @@
     ],
     "description": "Adds useEffect template"
   },
-  "add: useEffect default": {
-    "prefix": "useEffect",
-    "body": [
-      "useEffect(() => {",
-      "\t$1",
-      "},[$0])"
-    ],
-    "description": "Adds useEffect template"
+  "add: useCallback": {
+    "prefix": ["add-useCallback", "useCallback"],
+    "body":
+      ["const ${1:memoizedCallback} = useCallback(() => {", "\t${3:fn($2)}", "}, [${2:deps}])"]
+    ,
+    "description": "Adds useCallback. Returns a memoized callback"
+  },
+  "add: useMemo": {
+    "prefix": ["add-useMemo", "useMemo"],
+    "body":
+      "const ${1:memoizedValue} = useMemo(() => ${3:computeExpensiveValue}($2), [${2:deps}])"
+    ,
+    "description": "Adds useMemo. Returns a memoized value"
+  },
+  "add: useReducer": {
+    "prefix": ["add-useReducer", "useReducer"],
+    "body": "const [state, dispatch] = useReducer(${1:reducer}, ${2:initializerArg})",
+    "description": "Adds useReducer. Reducer of type `(state, action) => newState`, and returns the current state paired with a `dispatch` method."
+  },
+  "add: useContext": {
+    "prefix": ["add-useContext", "useContext"],
+    "body": "const ${1:featureContext} = useContext(${2:FeatureContext})",
+    "description": "Adds useContext. Accepts a context object (the value returned from `React.createContext`) and returns the current context value for that context."
+  },
+  "add: useRef": {
+    "prefix": ["add-useRef", "useRef"],
+    "body": "const ${1:ref} = useRef(${2:initialValue})",
+    "description": "Adds useRef. Returns a mutable ref object whose `.current` property is initialized to the passed argument (`initialValue`). The returned object will persist for the full lifetime of the component."
   },
   "clipboard: react component": {
     "prefix": "clip-Component",
