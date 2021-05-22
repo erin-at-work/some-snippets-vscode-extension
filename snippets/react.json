@@ -53,11 +53,25 @@
   },
   "add: useState": {
     "prefix": "add-useState",
-    "body": "const [$1, set$1] = useState<$2>($0)",
-    "description": "Adds useState template"
+    "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState$0(${2|false,undefined,null,0,'',value|})",
+    "description": "Adds useState with options for default state"
+  },
+  "add: useState default": {
+    "prefix": "useState",
+    "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState$0(${2|false,undefined,null,0,'',value|})",
+    "description": "Adds useState with options for default state"
   },
   "add: useEffect": {
     "prefix": "add-useEffect",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "},[$0])"
+    ],
+    "description": "Adds useEffect template"
+  },
+  "add: useEffect default": {
+    "prefix": "useEffect",
     "body": [
       "useEffect(() => {",
       "\t$1",
