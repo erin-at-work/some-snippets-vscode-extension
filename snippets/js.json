@@ -8,30 +8,5 @@
     "prefix": "clip-console",
     "body": "console.log(${CLIPBOARD})",
     "description": "Console log"
-  },
-  "add: ts-ignore": {
-    "prefix": "ts-ignore",
-    "body": "// @ts-ignore",
-    "description": "Adds @ts-ignore"
-  },
-  "transform: UPCASE": {
-    "prefix": "upcase",
-    "body": "${TM_SELECTED_TEXT/(.*)/${1:/upcase}/}",
-    "description": "upcase: 'SELECTED TEXT'"
-  },
-  "transform: Capitalize": {
-    "prefix": "capitalize",
-    "body": "${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}",
-    "description": "capitalize: 'Selected text'"
-  },
-  "transform: downcase": {
-    "prefix": "downcase",
-    "body": "${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}",
-    "description": "downcase: 'selected text'"
-  },
-  "transform: PascalCase": {
-    "prefix": "pascalcase",
-    "body": "${TM_SELECTED_TEXT/(.*)/${1:/pascalcase}/}",
-    "description": "pascalcase: 'SelectedText'"
   }
 }

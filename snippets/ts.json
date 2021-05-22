@@ -1,0 +1,21 @@
+{
+  "add: interface": {
+    "prefix": ["add-interface", "interface"],
+    "body": [
+      "export interface I${1:${TM_FILENAME_BASE}} {",
+      "\t${2:props}: ${3|string,boolean,() => void|}",
+      "\t$0",
+      "}"],
+    "description": "Adds exported Interface"
+  },
+  "add: type": {
+    "prefix": ["add-type", "type"],
+    "body": "export type T$1 = $0",
+    "description": "Adds exported Type"
+  },
+  "add: ts-ignore": {
+    "prefix": "ts-ignore",
+    "body": "// @ts-ignore",
+    "description": "Adds @ts-ignore"
+  }
+}
